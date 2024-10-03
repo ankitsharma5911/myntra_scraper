@@ -1,0 +1,13 @@
+README.md
+setup.py
+myntraScraper.egg-info/PKG-INFO
+myntraScraper.egg-info/SOURCES.txt
+myntraScraper.egg-info/dependency_links.txt
+myntraScraper.egg-info/requires.txt
+myntraScraper.egg-info/top_level.txt
+src/__init__.py
+src/data_report.py
+src/exception.py
+src/cloud_io/__init__.py
+src/constants/__init__.py
+src/utils/__init__.py

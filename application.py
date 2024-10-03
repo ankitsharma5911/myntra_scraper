@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 import  pandas as pd
 
 
-searchString = "male kurta"
+searchString = "pant"
 searchString = searchString.replace(" ","-")
 
 myntra = "https://www.myntra.com/" + searchString
@@ -57,7 +57,7 @@ try:
 
         rating = overallRating[0].div
         overallRating = float(rating.text)
-
+        print(overallRating)
         # data['rating'] =overallRating
         print("price..")
         # price
@@ -86,12 +86,13 @@ try:
         review = review_html.findAll("div",{"class":'detailed-reviews-userReviewsContainer'})
 
         print("review start..")
-        for i in range(len(review)):
-            user_rating=i.findAll("div",{"class":"user-review-main user-review-showRating"})
+        for i in review:
+            user_rating = review.findAll("div",{"class":"user-review-main user-review-showRating"})
 
-            user_comment= i.findAll("div",{"class":"user-review-reviewTextWrapper"})
+            user_comment = review.findAll("div",{"class":"user-review-reviewTextWrapper"})
             
-            user_name=i.findAll("div",{"class":"user-review-left"})
+            user_name = review.findAll("div",{"class":"user-review-left"})
+            print(user_name)
 
         for i in range(len(user_rating)):
             rating = user_rating[i].div.span.text
@@ -110,7 +111,7 @@ try:
     
 except Exception as e:
     print(e)
-df.to_csv(f"{searchString}.csv") 
+df.to_csv(f"data/{searchString}.csv") 
 driver.close()
 
 

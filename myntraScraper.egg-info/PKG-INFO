@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: myntraScraper
+Version: 0.0.1
+Author: ankit
+Author-email: ankitsharma450306@gmail.com
+Requires-Dist: bs4==0.0.1
+Requires-Dist: chromedriver-binary==121.0.6115.2.0
+Requires-Dist: database-connect==0.1.66
+Requires-Dist: flask-cors==4.0.0
+Requires-Dist: gunicorn==21.2.0
+Requires-Dist: ipykernel==6.26.0
+Requires-Dist: plotly==5.18.0
+Requires-Dist: pysocks==1.7.1
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: selenium==4.15.2
+Requires-Dist: streamlit==1.28.0
+Requires-Dist: tiktoken==0.4.0
