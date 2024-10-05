@@ -3,6 +3,7 @@ import streamlit as st
 from src.cloud_io import MongoIO
 from src.constants import SESSION_PRODUCT_KEY
 from src.scrapper.scrape import ScrapeReviews
+from src.data_report.genrate_data_report import DashboardGenerator
 
 st.set_page_config(
     "myntra-review-scrapper"
@@ -33,7 +34,9 @@ def form_input():
             print("Stored Data into mongodb")
 
         st.dataframe(scrapped_data)
-
+    if st.button('genrate review'):
+        deshboard = DashboardGenerator()
+        deshboard.display_general_info()
 
 if __name__ == "__main__":
     data = form_input()
